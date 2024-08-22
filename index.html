@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <title>須田宇宙</title>
+    <title>宇宙</title>
     <meta charset="utf-8" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r127/three.min.js"></script>
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
-    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/
-      main.js?attr=WGfZtobCYomRn3lRAyG-CWVXBZM7BKJq8SaiRPhyXKqpZ6SutVEW6RgcJTDvZpr9koEsgdS6iqPVSFNY9yKEoA" charset="UTF-8"></script>
     <script>
       // ページの読み込みを待つ
       window.addEventListener('load', init);
@@ -23,14 +21,6 @@
         });
         renderer.setSize(width, height);
 
-        // 平面を作成
-        var planeGeometry = new THREE.PlaneGeometry(100,100,20,20); //縦、横、分割数、分割数
-        var planeMaterial = new THREE.MeshBasicMaterial({color: 0x875C44});
-        var plane = new THREE.Mesh(planeGeometry,planeMaterial);
-        plane.rotation.set( -Math.PI/2, 0, 0 );
-        plane.position.set(0,0,0);
-        scene.add(plane);
-
         // シーンを作成
         const scene = new THREE.Scene();
 
@@ -46,6 +36,14 @@
         const directionalLight = new THREE.DirectionalLight(0xffffff);
         directionalLight.position.set(1, 1, 1);
         scene.add(directionalLight);
+
+        //平面を作成
+        var planeGeometry = new THREE.PlaneGeometry(1000,1000,20,20);//　縦、横、分割数、分割数
+        var planeMaterial = new THREE.MeshBasicMaterial({color: 0x875C44});
+        var plane = new THREE.Mesh(planeGeometry,planeMaterial);
+        plane.rotation.set( -Math.PI/2, 0, 0 );
+        plane.position.set(0,0,0);
+        scene.add(plane);
 
         // マテリアルを作成
         const earth_m = new THREE.MeshStandardMaterial({
