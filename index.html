@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <title>サンプル</title>
+    <title>宇宙</title>
     <meta charset="utf-8" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r127/three.min.js"></script>
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
@@ -38,6 +38,10 @@
         scene.add(directionalLight);
 
         // マテリアルを作成
+        const earth_m = new THREE.MeshStandardMaterial({
+          map: new THREE.TextureLoader().load('earth.png'),
+          side: THREE.DoubleSide,
+        });
 
         // 星屑を作成
         createStarField();
@@ -78,6 +82,8 @@
         sun.position.set(-700,400,0);
         sun.scale.set(500,500,500);
         scene.add(sun);
+        
+        update();
 
         // 毎フレーム時に実行されるループイベント
         function update() {
