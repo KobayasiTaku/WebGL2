@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <title>宇宙</title>
+    <title>須田宇宙</title>
     <meta charset="utf-8" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r127/three.min.js"></script>
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
@@ -38,7 +38,7 @@
         scene.add(directionalLight);
 
         //平面を作成
-        var planeGeometry = new THREE.PlaneGeometry(1000,1000,20,20);//　縦、横、分割数、分割数
+        var planeGeometry = new THREE.PlaneGeometry(10000000000,10000000000,20,20);//　縦、横、分割数、分割数
         var planeMaterial = new THREE.MeshBasicMaterial({color: 0x875C44});
         var plane = new THREE.Mesh(planeGeometry,planeMaterial);
         plane.rotation.set( -Math.PI/2, 0, 0 );
