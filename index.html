@@ -81,6 +81,18 @@
           scene.add(starfield);
         }
 
+        // 星
+        var textureLoader = new THREE.TextureLoader();  
+        var star_t = textureLoader.load("star.png");
+        const star_m = new THREE.SpriteMaterial({ map: star_t,});
+
+        const star = new THREE.Sprite(star_m);
+        star.position.set(-500,600,0);
+        star.scale.set(1000,1000,1000);
+        scene.add(star);
+        
+        
+
         // 太陽
         var textureLoader = new THREE.TextureLoader();  
         var sun_t = textureLoader.load("sun.png");
