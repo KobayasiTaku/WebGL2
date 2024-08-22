@@ -131,7 +131,38 @@
         tree2.position.set(700,250,700);
         tree2.scale.set(500,500,500);
         scene.add(tree4);
-        
+
+        var textureLoader = new THREE.TextureLoader();  
+        var tree5_t = textureLoader.load("tree4.png");
+        const tree5_m = new THREE.SpriteMaterial({ map: tree5_t,});
+        const tree5 = new THREE.Sprite(tree4_m);
+        tree5.position.set(900,250,900);
+        tree5.scale.set(500,500,500);
+        scene.add(tree5);
+
+        var textureLoader = new THREE.TextureLoader();  
+        var tree6_t = textureLoader.load("tree3.png");
+        const tree6_m = new THREE.SpriteMaterial({ map: tree6_t,});
+        const tree6 = new THREE.Sprite(tree6_m);
+        tree6.position.set(1700,250,1700);
+        tree6.scale.set(500,500,500);
+        scene.add(tree6);
+
+        var textureLoader = new THREE.TextureLoader();  
+        var tree7_t = textureLoader.load("tree2.png");
+        const tree7_m = new THREE.SpriteMaterial({ map: tree7_t,});
+        const tree7 = new THREE.Sprite(tree7_m);
+        tree7.position.set(1200,250,1200);
+        tree7.scale.set(500,500,500);
+        scene.add(tree7);
+
+        var textureLoader = new THREE.TextureLoader();  
+        var tree8_t = textureLoader.load("tree1.png");
+        const tree8_m = new THREE.SpriteMaterial({ map: tree8_t,});
+        const tree8 = new THREE.Sprite(tree8_m);
+        tree2.position.set(2700,250,2700);
+        tree2.scale.set(500,500,500);
+        scene.add(tree8);
         update();
 
         // 毎フレーム時に実行されるループイベント
