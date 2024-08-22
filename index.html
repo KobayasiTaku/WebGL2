@@ -125,12 +125,12 @@
         scene.add(tree3);
 
         var textureLoader = new THREE.TextureLoader();  
-        var tree2_t = textureLoader.load("tree2.png");
-        const tree2_m = new THREE.SpriteMaterial({ map: tree2_t,});
-        const tree2 = new THREE.Sprite(tree2_m);
+        var tree4_t = textureLoader.load("tree4.png");
+        const tree4_m = new THREE.SpriteMaterial({ map: tree4_t,});
+        const tree4 = new THREE.Sprite(tree4_m);
         tree2.position.set(0,250,0);
         tree2.scale.set(500,500,500);
-        scene.add(tree2);
+        scene.add(tree4);
         
         update();
 
