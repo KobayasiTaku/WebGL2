@@ -91,18 +91,6 @@
         star.scale.set(1000,1000,1000);
         scene.add(star);
         
-        
-
-        // 太陽
-        var textureLoader = new THREE.TextureLoader();  
-        var sun_t = textureLoader.load("sun.png");
-        const sun_m = new THREE.SpriteMaterial({ map: sun_t,});
-
-        const sun = new THREE.Sprite(sun_m);
-        sun.position.set(-500,600,0);
-        sun.scale.set(300,600,300);
-        scene.add(sun);
-
         // 木
         var textureLoader = new THREE.TextureLoader();  
         var tree0_t = textureLoader.load("tree0.png");
