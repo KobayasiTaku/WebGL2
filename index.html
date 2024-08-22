@@ -38,7 +38,7 @@
         scene.add(directionalLight);
 
         //平面
-        var planeGeometry = new THREE.PlaneGeometry(10000,10000,20,20);//　縦、横、分割数、分割数
+        var planeGeometry = new THREE.PlaneGeometry(1000000,1000000,20,20);//　縦、横、分割数、分割数
         var planeMaterial = new THREE.MeshBasicMaterial({color: 0x875C44});
         var plane = new THREE.Mesh(planeGeometry,planeMaterial);
         plane.rotation.set( -Math.PI/2, 0, 0 );
@@ -88,7 +88,7 @@
 
         const sun = new THREE.Sprite(sun_m);
         sun.position.set(-500,600,0);
-        sun.scale.set(300,300,300);
+        sun.scale.set(300,600,300);
         scene.add(sun);
 
         // 木
@@ -104,7 +104,7 @@
         var tree1_t = textureLoader.load("tree1.png");
         const tree1_m = new THREE.SpriteMaterial({ map: tree1_t,});
         const tree1 = new THREE.Sprite(tree1_m);
-        tree1.position.set(0,250,0);
+        tree1.position.set(250,250,250);
         tree1.scale.set(500,500,500);
         scene.add(tree1);
 
@@ -112,7 +112,7 @@
         var tree2_t = textureLoader.load("tree2.png");
         const tree2_m = new THREE.SpriteMaterial({ map: tree2_t,});
         const tree2 = new THREE.Sprite(tree2_m);
-        tree2.position.set(0,250,0);
+        tree2.position.set(400,250,400);
         tree2.scale.set(500,500,500);
         scene.add(tree2);
 
@@ -120,7 +120,7 @@
         var tree3_t = textureLoader.load("tree3.png");
         const tree3_m = new THREE.SpriteMaterial({ map: tree3_t,});
         const tree3 = new THREE.Sprite(tree3_m);
-        tree3.position.set(0,250,0);
+        tree3.position.set(600,250,600);
         tree3.scale.set(500,500,500);
         scene.add(tree3);
 
@@ -128,7 +128,7 @@
         var tree4_t = textureLoader.load("tree4.png");
         const tree4_m = new THREE.SpriteMaterial({ map: tree4_t,});
         const tree4 = new THREE.Sprite(tree4_m);
-        tree2.position.set(0,250,0);
+        tree2.position.set(700,250,700);
         tree2.scale.set(500,500,500);
         scene.add(tree4);
         
