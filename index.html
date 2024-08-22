@@ -130,8 +130,38 @@
         const tree4 = new THREE.Sprite(tree4_m);
         tree2.position.set(700,250,700);
         tree2.scale.set(500,500,500);
-        scene.add(tree4);
+        scene.add(tree4)
 
+        //リンゴの実
+        var fruit_g = new THREE.SphereGeometry( 200, 32, 32 );
+        var material_r = new THREE.MeshLambertMaterial({ color: 0xBF1E33 });
+        var fruit = new THREE.Mesh( fruit_g, material_r);
+        fruit.scale.x = 1.1;
+        fruit.scale.z = 1.1;
+        fruit.position.set(0,200,0);
+
+        //枝
+        var branch_g = new THREE.CylinderGeometry( 20, 10, 280, 32 );
+        var material_b = new THREE.MeshLambertMaterial({ color: 0x734E30 });
+        var branch = new THREE.Mesh( branch_g, material_b);
+        branch.position.set(0,340,0);
+
+         //葉
+        var leaf_g = new THREE.CylinderGeometry( 34, 34, 10, 32 );
+        var material_g = new THREE.MeshLambertMaterial({ color: 0x005731 });
+        var leaf = new THREE.Mesh( leaf_g, material_g);
+        leaf.scale.x = 2.5;
+        leaf.rotation.x = 1.57;
+        leaf.position.set(80,440,0);
+        
+
+        //リンゴ
+        const apple = new THREE.Group();
+        apple.add(fruit);//実を追加
+        apple.add(branch);//枝を追加
+        apple.add(leaf);//葉を追加
+        apple.position.set(150,0,400);
+        scene.add(apple);
         
         update();
 
@@ -140,6 +170,8 @@
           // レンダリング
           renderer.render(scene, camera);
           requestAnimationFrame(update);
+          // リンゴ回転
+          apple.rotation.y += 0.2;;
           
         }
       }
